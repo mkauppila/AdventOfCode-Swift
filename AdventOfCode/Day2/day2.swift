@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  day2.swift
 //  AdventOfCode
 //
 //  Created by Markus Kauppila on 09/12/15.
@@ -8,5 +8,10 @@
 
 import Foundation
 
-//day1()
-day2()
+func day2() {
+    let input = Array(readInputFile("day2-input").characters)
+
+    for i in input {
+        print("a \(i)")
+    }
+}

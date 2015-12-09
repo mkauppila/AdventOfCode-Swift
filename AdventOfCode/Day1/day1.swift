@@ -8,11 +8,6 @@
 
 import Foundation
 
-func readInputFile(fileName: String) -> String {
-    let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "txt")
-    return try! String(contentsOfFile: path!)
-}
-
 func day1() {
     let input = Array(readInputFile("day1-input").characters)
 
