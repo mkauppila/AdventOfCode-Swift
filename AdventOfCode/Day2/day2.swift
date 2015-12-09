@@ -8,10 +8,14 @@
 
 import Foundation
 
-struct Dimenensions {
+struct Dimensions {
     let lenght: Int
     let width: Int
     let height: Int
+
+    func toArray() -> [Int] {
+        return [lenght, width, height]
+    }
 }
 
 func day2() {
@@ -20,21 +24,38 @@ func day2() {
 
     let sumOfNeededWrappingPaper =
         input.map { stringToDimensions($0) }
-             .map { neededWrappingPaperForDimesions($0) }
+             .map { neededWrappingPaperForDimensions($0) }
              .reduce(0, combine: +)
 
-    print("answer: \(sumOfNeededWrappingPaper)")
+    print("answer (part I): \(sumOfNeededWrappingPaper)")
     assert(sumOfNeededWrappingPaper == 1598415)
+
+    let sumOfNeededRibbon =
+        input.map { stringToDimensions($0) }
+             .map { neededRibbonForDimensions($0) }
+             .reduce(0, combine: +)
+
+    print("answer (part II): \(sumOfNeededRibbon)")
+    assert(sumOfNeededRibbon == 3812909)
 }
 
-func stringToDimensions(dimensions: String) -> Dimenensions {
+func neededRibbonForDimensions(dimensions: Dimensions) -> Int {
+    let dim = dimensions.toArray().sort()
+
+    let ribbonForPresent = dim[0] * 2 + dim[1] * 2
+    let ribbonForBow = dimensions.lenght * dimensions.width * dimensions.height
+
+    return ribbonForPresent + ribbonForBow
+}
+
+func stringToDimensions(dimensions: String) -> Dimensions {
     let components = dimensions.componentsSeparatedByString("x")
-    return Dimenensions(lenght: Int(components[0])!,
-                        width: Int(components[1])!,
-                        height: Int(components[2])!)
+    return Dimensions(lenght: Int(components[0])!,
+                      width: Int(components[1])!,
+                      height: Int(components[2])!)
 }
 
-func neededWrappingPaperForDimesions(dimensions: Dimenensions) -> Int {
+func neededWrappingPaperForDimensions(dimensions: Dimensions) -> Int {
     let areasOfAllSides = [
         areaOfSide(dimensions.lenght, dimensions.width),
         areaOfSide(dimensions.width, dimensions.height),
