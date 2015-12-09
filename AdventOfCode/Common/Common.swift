@@ -12,3 +12,9 @@ func readInputFile(fileName: String) -> String {
     let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "txt")
     return try! String(contentsOfFile: path!)
 }
+
+extension String {
+    func isEmpty() -> Bool {
+        return self.characters.count == 0
+    }
+}
