@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4798346B1C185CE800E20C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798346A1C185CE800E20C82 /* AppDelegate.swift */; };
-		4798346D1C185CE800E20C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4798346C1C185CE800E20C82 /* Assets.xcassets */; };
-		479834701C185CE800E20C82 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4798346E1C185CE800E20C82 /* MainMenu.xib */; };
+		479834781C185DA800E20C82 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479834771C185DA800E20C82 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		479834671C185CE800E20C82 /* AdventOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4798346A1C185CE800E20C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4798346C1C185CE800E20C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4798346F1C185CE800E20C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		479834711C185CE800E20C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479834771C185DA800E20C82 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +45,7 @@
 		479834691C185CE800E20C82 /* AdventOfCode */ = {
 			isa = PBXGroup;
 			children = (
-				4798346A1C185CE800E20C82 /* AppDelegate.swift */,
-				4798346C1C185CE800E20C82 /* Assets.xcassets */,
-				4798346E1C185CE800E20C82 /* MainMenu.xib */,
-				479834711C185CE800E20C82 /* Info.plist */,
+				479834771C185DA800E20C82 /* main.swift */,
 			);
 			path = AdventOfCode;
 			sourceTree = "<group>";
@@ -116,8 +108,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4798346D1C185CE800E20C82 /* Assets.xcassets in Resources */,
-				479834701C185CE800E20C82 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,22 +118,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4798346B1C185CE800E20C82 /* AppDelegate.swift in Sources */,
+				479834781C185DA800E20C82 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4798346E1C185CE800E20C82 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4798346F1C185CE800E20C82 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		479834721C185CE800E20C82 /* Debug */ = {
@@ -230,11 +209,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = AdventOfCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.markuskauppila.AdventOfCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -242,8 +222,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = AdventOfCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.markuskauppila.AdventOfCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -269,6 +249,7 @@
 				479834761C185CE800E20C82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
