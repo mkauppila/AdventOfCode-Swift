@@ -18,3 +18,17 @@ extension String {
         return self.characters.count == 0
     }
 }
+
+extension Array {
+    func filterWithIndex(includeElement: (Element, Index) -> Bool) -> [Element] {
+        var results: [Element] = []
+        var index = 0
+        for x in self {
+            if includeElement(x, index) {
+                results.append(x)
+            }
+            index++
+        }
+        return results
+    }
+}
