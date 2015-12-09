@@ -14,6 +14,10 @@ func readInputFile(fileName: String) -> String {
 }
 
 func day1() {
-    let input = readInputFile("day1-input")
-    print(input)
+    let input = Array(readInputFile("day1-input").characters)
+
+    let floorsUp = input.filter { $0 == "(" }.count
+    let floorsDown = input.filter { $0 == ")" }.count
+
+    print("answer (part 1): \(floorsUp - floorsDown)")
 }
