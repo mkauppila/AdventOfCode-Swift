@@ -15,6 +15,7 @@
 		479834851C18670D00E20C82 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479834841C18670D00E20C82 /* Common.swift */; };
 		479834881C188B4F00E20C82 /* day3-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 479834871C188B4F00E20C82 /* day3-input.txt */; };
 		4798348A1C188B6D00E20C82 /* day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479834891C188B6D00E20C82 /* day3.swift */; };
+		47E0A0A41C195F6000E917D8 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0A0A31C195F6000E917D8 /* Day4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,9 @@
 		479834841C18670D00E20C82 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		479834871C188B4F00E20C82 /* day3-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day3-input.txt"; sourceTree = "<group>"; };
 		479834891C188B6D00E20C82 /* day3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day3.swift; sourceTree = "<group>"; };
+		47E0A0A31C195F6000E917D8 /* Day4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		47E0A0A51C19600700E917D8 /* AdventOfCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdventOfCode-Bridging-Header.h"; sourceTree = "<group>"; };
+		47E0A0A81C19602400E917D8 /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 		4798345E1C185CE800E20C82 = {
 			isa = PBXGroup;
 			children = (
+				47E0A0A81C19602400E917D8 /* libcommonCrypto.tbd */,
 				479834691C185CE800E20C82 /* AdventOfCode */,
 				479834681C185CE800E20C82 /* Products */,
 			);
@@ -63,7 +68,9 @@
 				479834791C185E1100E20C82 /* Day1 */,
 				4798347E1C1866BA00E20C82 /* Day2 */,
 				479834861C188B4F00E20C82 /* Day3 */,
+				47E0A0A21C195F5000E917D8 /* Day4 */,
 				479834771C185DA800E20C82 /* main.swift */,
+				47E0A0A51C19600700E917D8 /* AdventOfCode-Bridging-Header.h */,
 			);
 			path = AdventOfCode;
 			sourceTree = "<group>";
@@ -101,6 +108,14 @@
 				479834891C188B6D00E20C82 /* day3.swift */,
 			);
 			path = Day3;
+			sourceTree = "<group>";
+		};
+		47E0A0A21C195F5000E917D8 /* Day4 */ = {
+			isa = PBXGroup;
+			children = (
+				47E0A0A31C195F6000E917D8 /* Day4.swift */,
+			);
+			path = Day4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479834851C18670D00E20C82 /* Common.swift in Sources */,
+				47E0A0A41C195F6000E917D8 /* Day4.swift in Sources */,
 				4798347D1C185E1100E20C82 /* day1.swift in Sources */,
 				479834821C1866D000E20C82 /* day2.swift in Sources */,
 				4798348A1C188B6D00E20C82 /* day3.swift in Sources */,
@@ -268,12 +284,18 @@
 		479834751C185CE800E20C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.markuskauppila.AdventOfCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AdventOfCode/AdventOfCode-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -281,12 +303,18 @@
 		479834761C185CE800E20C82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.markuskauppila.AdventOfCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AdventOfCode/AdventOfCode-Bridging-Header.h";
 			};
 			name = Release;
 		};
