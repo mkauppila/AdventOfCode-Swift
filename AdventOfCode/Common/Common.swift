@@ -28,4 +28,11 @@ extension Array {
         }
         return results
     }
+
+    func any(filter: (Element) -> Bool) -> Bool {
+        for x in self where filter(x) {
+            return true
+        }
+        return false
+    }
 }
