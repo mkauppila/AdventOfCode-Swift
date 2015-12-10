@@ -30,7 +30,6 @@
 		479834891C188B6D00E20C82 /* day3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day3.swift; sourceTree = "<group>"; };
 		47E0A0A31C195F6000E917D8 /* Day4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		47E0A0A51C19600700E917D8 /* AdventOfCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdventOfCode-Bridging-Header.h"; sourceTree = "<group>"; };
-		47E0A0A81C19602400E917D8 /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +46,6 @@
 		4798345E1C185CE800E20C82 = {
 			isa = PBXGroup;
 			children = (
-				47E0A0A81C19602400E917D8 /* libcommonCrypto.tbd */,
 				479834691C185CE800E20C82 /* AdventOfCode */,
 				479834681C185CE800E20C82 /* Products */,
 			);

@@ -14,14 +14,26 @@ func day4() {
 
     let input = "iwrupvqb"
 
+    let answerOne = findHashStartingWith("00000", input: input)
+    print("Answer (PART I): \(answerOne)")
+    assert(answerOne == 346386)
+
+    // Brute forcing the answer takes 10+ minutes
+    let answerTwo = findHashStartingWith("000000", input: input)
+    print("Answer (PART II): \(answerTwo)")
+    assert(answerTwo == 9958218)
+}
+
+func findHashStartingWith(prefix: String, input: String) -> Int {
     for value in naturalNumbers() {
         if let result = MD5("\(input)\(value)") {
-            if result.hasPrefix("00000") {
-                print("Answer (PART I): \(value)")
-                break
+            if result.hasPrefix(prefix) {
+                return value
             }
         }
     }
+
+    return 0
 }
 
 func naturalNumbers() -> AnyGenerator<Int> {
