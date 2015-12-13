@@ -5,16 +5,28 @@
 
 import Foundation
 
-enum LightState {
-    case ON
-    case OFF
-}
-
 struct Light {
+    enum LightState {
+        case ON
+        case OFF
+    }
+
     var state: LightState
+    var brightness: Int
 
     init() {
         state = .OFF
+        brightness = 0
+    }
+
+    mutating func turnOn() {
+        state = .ON
+        brightness += 1
+    }
+
+    mutating func turnOff() {
+        state = .OFF
+        brightness = max(0, brightness - 1)
     }
 
     mutating func toggle() {
@@ -23,6 +35,7 @@ struct Light {
         } else {
             state = .ON
         }
+        brightness += 2
     }
 
     var isOn: Bool {
@@ -73,28 +86,23 @@ struct Instruction: CustomStringConvertible {
 func createInstruction(rawCommand: String) -> Instruction? {
     let parsedCommand = ParsedInstruction(rawCommand)
 
-    guard let command = Command(rawValue: parsedCommand.command) else {
-        return nil
-    }
-
     return Instruction(
-        command: command,
+        command:  Command(rawValue: parsedCommand.command)!,
         lowerCorner: parsedCommand.lowerCorner,
         upperCorner: parsedCommand.upperCorner
     )
 }
 
 func day6() {
-    let input = readInputFile("day6-input")
+    let instructions = readInputFile("day6-input")
         .componentsSeparatedByString("\n")
         .filter { !$0.isEmpty }
         .map { $0.stringByReplacingOccurrencesOfString("turn on", withString: "on") }
         .map { $0.stringByReplacingOccurrencesOfString("turn off", withString: "off") }
+        .map { createInstruction($0) }
 
-    let instructions = input.map { createInstruction($0) }
     let million = 1000 * 1000
     var grid = Array<Light>(count: million, repeatedValue: Light())
-
     for instruction in instructions {
         grid = applyInstruction(instruction!, toLightGrid: grid)
     }
@@ -104,6 +112,12 @@ func day6() {
     }
     print("Answer (PART I) \(litLightsCount)")
     assert(litLightsCount == 377891)
+
+    let overallBrightness = grid.reduce(0) { (brightness, light) -> Int in
+        return brightness + light.brightness
+    }
+    print("Answer (PART II) \(overallBrightness)")
+    assert(overallBrightness == 14110788)
 }
 
 func applyInstruction(instruction: Instruction, var toLightGrid grid: [Light]) -> [Light] {
@@ -114,16 +128,16 @@ func applyInstruction(instruction: Instruction, var toLightGrid grid: [Light]) -
     for y in yRange {
         for x in xRange {
             let location = x + y * gridWidth
-
             switch instruction.command {
             case .OFF:
-                grid[location].state = .OFF
+                grid[location].turnOff()
             case .ON:
-                grid[location].state = .ON
+                grid[location].turnOn()
             case .TOGGLE:
                 grid[location].toggle()
             }
         }
     }
+
     return grid
 }
