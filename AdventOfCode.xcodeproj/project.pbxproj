@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478F49BC1C1DDBF200A74C3B /* day6-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 478F49BB1C1DDBF200A74C3B /* day6-input.txt */; };
+		478F49BE1C1DDC0200A74C3B /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F49BD1C1DDC0200A74C3B /* Day6.swift */; };
 		479834781C185DA800E20C82 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479834771C185DA800E20C82 /* main.swift */; };
 		4798347C1C185E1100E20C82 /* day1-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4798347A1C185E1100E20C82 /* day1-input.txt */; };
 		4798347D1C185E1100E20C82 /* day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798347B1C185E1100E20C82 /* day1.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		478F49BB1C1DDBF200A74C3B /* day6-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day6-input.txt"; sourceTree = "<group>"; };
+		478F49BD1C1DDC0200A74C3B /* Day6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		479834671C185CE800E20C82 /* AdventOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479834771C185DA800E20C82 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4798347A1C185E1100E20C82 /* day1-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day1-input.txt"; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		478F49BA1C1DDBF200A74C3B /* Day6 */ = {
+			isa = PBXGroup;
+			children = (
+				478F49BB1C1DDBF200A74C3B /* day6-input.txt */,
+				478F49BD1C1DDC0200A74C3B /* Day6.swift */,
+			);
+			path = Day6;
+			sourceTree = "<group>";
+		};
 		4798345E1C185CE800E20C82 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +85,7 @@
 				479834861C188B4F00E20C82 /* Day3 */,
 				47E0A0A21C195F5000E917D8 /* Day4 */,
 				47E0A0AA1C1971A900E917D8 /* Day5 */,
+				478F49BA1C1DDBF200A74C3B /* Day6 */,
 				479834771C185DA800E20C82 /* main.swift */,
 			);
 			path = AdventOfCode;
@@ -189,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E0A0AE1C1971EB00E917D8 /* day5-input.txt in Resources */,
+				478F49BC1C1DDBF200A74C3B /* day6-input.txt in Resources */,
 				479834881C188B4F00E20C82 /* day3-input.txt in Resources */,
 				4798347C1C185E1100E20C82 /* day1-input.txt in Resources */,
 				479834801C1866BA00E20C82 /* day2-input.txt in Resources */,
@@ -203,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479834851C18670D00E20C82 /* Common.swift in Sources */,
+				478F49BE1C1DDC0200A74C3B /* Day6.swift in Sources */,
 				47E0A0AC1C1971BC00E917D8 /* Day5.swift in Sources */,
 				47E0A0A41C195F6000E917D8 /* Day4.swift in Sources */,
 				4798347D1C185E1100E20C82 /* day1.swift in Sources */,
