@@ -31,7 +31,7 @@
 		479834871C188B4F00E20C82 /* day3-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day3-input.txt"; sourceTree = "<group>"; };
 		479834891C188B6D00E20C82 /* day3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day3.swift; sourceTree = "<group>"; };
 		47E0A0A31C195F6000E917D8 /* Day4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
-		47E0A0A51C19600700E917D8 /* AdventOfCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdventOfCode-Bridging-Header.h"; sourceTree = "<group>"; };
+		47E0A0A51C19600700E917D8 /* AdventOfCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AdventOfCode-Bridging-Header.h"; path = "../AdventOfCode-Bridging-Header.h"; sourceTree = "<group>"; };
 		47E0A0AB1C1971BC00E917D8 /* Day5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
 		47E0A0AD1C1971EB00E917D8 /* day5-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day5-input.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +73,6 @@
 				47E0A0A21C195F5000E917D8 /* Day4 */,
 				47E0A0AA1C1971A900E917D8 /* Day5 */,
 				479834771C185DA800E20C82 /* main.swift */,
-				47E0A0A51C19600700E917D8 /* AdventOfCode-Bridging-Header.h */,
 			);
 			path = AdventOfCode;
 			sourceTree = "<group>";
@@ -99,6 +98,7 @@
 		479834831C18670200E20C82 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				47E0A0A51C19600700E917D8 /* AdventOfCode-Bridging-Header.h */,
 				479834841C18670D00E20C82 /* Common.swift */,
 			);
 			path = Common;

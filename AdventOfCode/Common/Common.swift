@@ -14,6 +14,10 @@ extension String {
     func isEmpty() -> Bool {
         return self.characters.count == 0
     }
+
+    func lengthWithUTF8Encoding() -> Int {
+        return lengthOfBytesUsingEncoding(NSUTF8StringEncoding)
+    }
 }
 
 extension Array {
